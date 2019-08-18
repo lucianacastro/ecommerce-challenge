@@ -1,0 +1,17 @@
+{
+  "name": "bff",
+  "version": "1.0.0",
+  "description": "Backend for frontend",
+  "main": "src/index.js",
+  "scripts": {
+    "start:dev": "nodemon --watch src src/index.js",
+    "test": "jest"
+  },
+  "author": "Luciana Castro",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "got": "^9.6.0",
+    "nodemon": "^1.19.1"
+  }
+}
