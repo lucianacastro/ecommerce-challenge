@@ -1,7 +1,7 @@
 const { Router } = require('express');
 const itemsRouter = Router();
 
-const got = require('got');
+const { getSearchResults, getItem, getItemDescription } = require('../services/api');
 
 if (!process.env.MELI_API_URL) {
     throw new Error('MELI_API_URL is not define');
@@ -28,7 +28,7 @@ const mapResultToItem = (item) => ({
         'amount': item.price,
         'decimals': NaN, // ver qué dato debe ir acá
     },
-    'picture': item.pictures[0].secure_url, // ver si conviene ir a expandir y traer imagen mas grande
+    'picture': item.pictures[0].secure_url,
     'condition': item.condition,
     'free_shipping': item.shipping.free_shipping,
 });     
@@ -46,20 +46,10 @@ const mapSearchResultsToResponse = (searchResults) => {
     }
 };
 
-const getSearchResultsFromAPI = async (searchText) => {
-    const encodedQuery = encodeURI(searchText);
-    const { body } = await got(`${process.env.MELI_API_URL}/sites/MLA/search?q=${searchText}&limit=4`, {json:true});
-    return body; // devuelve un objeto con results y filters
-};
-
-const getItemFromAPI = async (itemId) => {
-    const { body } = await got(`${process.env.MELI_API_URL}/items/${itemId}`, {json:true});
-    return body;
-};
 
 const expandSearchResultsFromAPI = async (searchResults) => {
     const { results } = searchResults;
-    const itemsPromises = results.map(result => getItemFromAPI(result.id));
+    const itemsPromises = results.map(result => getItem(result.id));
     const expandedResults = await Promise.all(itemsPromises)
         .then(items => results.map((result, idx) => ({
             ...result, 
@@ -68,10 +58,30 @@ const expandSearchResultsFromAPI = async (searchResults) => {
     return { ...searchResults, results: expandedResults };
 };
 
+
+// Mapping Item
+
+const mapItemToResponse = (item) => {
+    return {
+        'author': { // https://api.mercadolibre.com/users/{sellerId} ????
+            'name': '',
+            'lastName': '',
+        },
+        'item': mapResultToItem(item),
+        'sold_quantity': item.sold_quantity,
+        'description': item.description
+    }
+}
+
+const expandItemFromAPI = async (item) => {
+    const itemDescription = await getItemDescription(item.id);
+    return { ...item, description: itemDescription.plain_text }
+}
+
 itemsRouter.get('/items', async (req, res) => {
     try {
-        //const searchResults = await getSearchResultsFromAPI(req.query.q);
-        const searchResults = await expandSearchResultsFromAPI( await getSearchResultsFromAPI(req.query.q));
+        //const searchResults = await getSearchResults(req.query.q);
+        const searchResults = await expandSearchResultsFromAPI( await getSearchResults(req.query.q));
         res.send(mapSearchResultsToResponse(searchResults));
     } catch (error) {
         console.error(error);
@@ -79,8 +89,15 @@ itemsRouter.get('/items', async (req, res) => {
     }
 });
 
-itemsRouter.get('/items/:itemId', function(req, res) {
-    res.send({itemId: req.params.itemId})
+itemsRouter.get('/items/:itemId', async (req, res) => {
+    try {
+        const item = await expandItemFromAPI((await getItem(req.params.itemId)));
+        res.send(mapItemToResponse(item));
+    } catch (error) {
+        console.error(error);
+        res.statusCode(500).send({error: 'Internal server error'})
+    }
+    
 });
 
 module.exports = itemsRouter;
