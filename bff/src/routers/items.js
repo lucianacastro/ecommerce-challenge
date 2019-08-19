@@ -35,11 +35,10 @@ const mapResultToItem = (item) => ({
 
 const mapSearchResultsToResponse = (searchResults) => {
     const { results, filters } = searchResults;
-    console.log({results, filters})
     return {
         'author': { // https://api.mercadolibre.com/users/{sellerId} ????
             'name': '',
-            'lastName': '',
+            'lastname': '',
         },
         'categories': mapCategories(filters),
         'items': results.map(item => mapResultToItem(item)),
@@ -65,7 +64,7 @@ const mapItemToResponse = (item) => {
     return {
         'author': { // https://api.mercadolibre.com/users/{sellerId} ????
             'name': '',
-            'lastName': '',
+            'lastname': '',
         },
         'item': mapResultToItem(item),
         'sold_quantity': item.sold_quantity,
@@ -80,7 +79,6 @@ const expandItemFromAPI = async (item) => {
 
 itemsRouter.get('/items', async (req, res) => {
     try {
-        //const searchResults = await getSearchResults(req.query.q);
         const searchResults = await expandSearchResultsFromAPI( await getSearchResults(req.query.q));
         res.send(mapSearchResultsToResponse(searchResults));
     } catch (error) {
