@@ -1,5 +1,9 @@
 const got = require('got');
 
+if (!process.env.MELI_API_URL) {
+    throw new Error('MELI_API_URL is not define');
+}
+
 const getSearchResults = async (searchText) => {
     const encodedQuery = encodeURI(searchText);
     const { body } = await got(`${process.env.MELI_API_URL}/sites/MLA/search?q=${searchText}&limit=4`, {json:true});
@@ -16,4 +20,20 @@ const getItemDescription = async (itemId) => {
     return body;
 };
 
-module.exports = { getSearchResults, getItem, getItemDescription };
+const expandSearchResults = async (searchResults) => {
+    const { results } = searchResults;
+    const itemsPromises = results.map(result => getItem(result.id));
+    const expandedResults = await Promise.all(itemsPromises)
+        .then(items => results.map((result, idx) => ({
+            ...result, 
+            pictures: items[idx].pictures,
+        })));
+    return { ...searchResults, results: expandedResults };
+};
+
+const expandItem = async (item) => {
+    const itemDescription = await getItemDescription(item.id);
+    return { ...item, description: itemDescription.plain_text }
+}
+
+module.exports = { getSearchResults, getItem, expandSearchResults, expandItem };
