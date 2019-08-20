@@ -4,7 +4,7 @@
   "description": "Backend for frontend",
   "main": "src/index.js",
   "scripts": {
-    "start:dev": "nodemon --watch src src/index.js",
+    "dev": "nodemon --watch src src/index.js",
     "test": "jest"
   },
   "author": "Luciana Castro",

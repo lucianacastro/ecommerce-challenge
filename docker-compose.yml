@@ -3,7 +3,7 @@ version: '3'
 services:
   bff:
     build: bff
-    command: npm run start:dev
+    command: npm run dev
     environment:
       - PORT=3001
       - MELI_API_URL=https://api.mercadolibre.com
@@ -12,13 +12,16 @@ services:
     volumes:
       - ./bff:/usr/src/app
 
-  # app:
-  #   build: app
-  #   command: npm run start:dev
-  #   depends_on:
-  #     - bff
-  #   environment:
-  #     - PORT=3000
-  #     - BFF_API_URL=http://bff:3001
-  #   ports:
-  #     - 3000:3000
+  app:
+    build: app
+    command: npm run dev
+    depends_on:
+      - bff
+    environment:
+      - PORT=3000
+      - BFF_API_URL=http://bff:3001
+    ports:
+      - 3000:3000
+    volumes:
+      - ./app:/usr/src/app
+      - /usr/src/app/node_modules/node-sass/
