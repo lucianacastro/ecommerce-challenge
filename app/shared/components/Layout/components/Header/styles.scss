@@ -1,0 +1,17 @@
+@import '../../../../scss/variables.scss';
+.header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 55px;
+    padding: 0 10px;
+    background-color: $yellow;
+    box-sizing: border-box;
+    &__search-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 980px;
+    }
+}

@@ -1,0 +1,50 @@
+@import '../../scss/variables.scss';
+.card {
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: $white;
+    &__link {
+        display: flex;
+        text-decoration: none;
+        color: $dark;
+    }
+    &__image {
+        width: 180px;
+        height: 180px;
+        border-radius: 2px;
+    }
+    &__description-wrapper {
+        display: flex;
+        justify-content: space-between;
+        width: calc(100% - 180px);
+        padding: 15px 20px;
+        box-sizing: border-box;
+    }
+    &__price-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    &__price {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+    &__value {
+        font-size: 20px;
+    }
+    &__shipping-icon {
+        width: 15px;
+        height: 15px;
+        margin-left: 10px;
+        background-image: url('/static/ic_shipping.png');
+        background-size: cover;
+    }
+    &__description {
+        text-transform: capitalize;
+        font-size: 14px;
+    }
+    &__city {
+        font-size: 12px;
+        color: $grey;
+    }
+}

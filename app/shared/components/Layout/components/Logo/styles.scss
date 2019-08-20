@@ -1,0 +1,9 @@
+.logo {
+    display: block;
+    &__image {
+        width: 56px;
+        height: 38px;
+        background-image: url('/static/Logo_ML@2x.png');
+        background-size: cover;
+    }
+} 

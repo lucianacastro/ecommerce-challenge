@@ -1,0 +1,35 @@
+@import '../../scss/variables.scss';
+.search-box {
+    display: flex;
+    width: 100%;
+    margin-left: 25px;
+    &__input {
+        width: calc(100% - 40px);
+        padding-left: 10px;
+        background-color: $white;
+        border: none;
+        border-radius: 2px 0 0 2px;
+        box-sizing: border-box;
+        font-size: 16px;
+        color: $dark;
+        outline: none;
+        &::placeholder {
+            color: #e6e6e6;
+        }
+    }
+    &__icon {
+        width: 18px;
+        height: 18px;
+        background-image: url('/static/ic_Search@2x.png');
+        background-size: cover;
+    }
+    &__button {
+        display: flex;
+        justify-content: center;
+        width: 42px;
+        height: 38px;
+        border: none;
+        border-radius: 0 2px 2px 0;
+        background-color: $lightGrey;
+    }
+}
