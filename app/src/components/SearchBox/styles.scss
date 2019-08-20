@@ -26,10 +26,14 @@
     &__button {
         display: flex;
         justify-content: center;
+        align-items: center;
         width: 42px;
         height: 38px;
+        padding: 0;
         border: none;
         border-radius: 0 2px 2px 0;
         background-color: $lightGrey;
+        outline: none;
+        cursor: pointer;
     }
 }
