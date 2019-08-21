@@ -19,7 +19,8 @@ services:
       - bff
     environment:
       - PORT=3000
-      - BFF_API_URL=http://bff:3001
+      - BE_BFF_API_URL=http://bff:3001
+      - FE_BFF_API_URL=http://localhost:3001
     ports:
       - 3000:3000
     volumes:

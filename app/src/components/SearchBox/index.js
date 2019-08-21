@@ -1,15 +1,49 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import Link from 'next/link';
+import Router from 'next/router';
 
 import './styles.scss';
 
 export default class SearchBox extends React.Component {
+
+    static displayName = 'SearchBox';
+    state = {
+        textInput: '',
+    }
+
+    updateTextInput = (event) => {
+        const { target } = event;
+        if(target) {
+            this.setState ({ textInput: target.value })
+        }
+    }
+
+    handleKeyPress = (event) => {
+        if (event.key === 'Enter' || event.nativeEvent.keyCode === 13) {
+            Router.push(`/search${this.state.textInput.length > 0 ? `?q=${this.state.textInput}` : ''}`);
+          }
+    }
+
     render () {
+        const { textInput } = this.state;
         return (
             <div className='search-box'>
-                <input className='search-box__input' placeholder='Nunca dejes de buscar' />
-                <button className='search-box__button' >
-                    <div className='search-box__icon' />
-                </button>
+                <input 
+                    className='search-box__input'
+                    placeholder='Nunca dejes de buscar'
+                    type='text'
+                    value={textInput}
+                    onChange={this.updateTextInput}
+                    onKeyPress={this.handleKeyPress}
+                />
+                <Link href={`/search?q=${textInput}`}>
+                    <a>
+                        <button className='search-box__button' type='submit' >
+                            <div className='search-box__icon' />
+                        </button>
+                    </a>
+                </Link>
             </div>
         );
     }

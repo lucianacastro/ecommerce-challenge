@@ -1,11 +1,13 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
 const itemsRouter = require('./routers/items');
 
 app.get('/', function(req, res) {
     res.send('Hello World!');
 });
 
+app.use(cors());
 app.use('/api', itemsRouter);
 
 
