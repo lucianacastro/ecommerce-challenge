@@ -13,7 +13,7 @@ const Card = ({ imageUrl, price, freeShipping, description, city, title }) => (
                 <div className='card__description-wrapper'>
                     <div className='card__price-wrapper'>
                         <div className='card__price'>
-                            <div className='card__value'>{`$ ${price.amount}`}</div>
+                            <div className='card__value'>{`$ ${Math.trunc(price.amount)}`}</div>
                             { freeShipping 
                                 ? <div className='card__shipping-icon' title='Free shipping'/>
                                 : false
@@ -21,7 +21,7 @@ const Card = ({ imageUrl, price, freeShipping, description, city, title }) => (
                         </div>
                         <div className='card__description'>{title}</div>
                     </div>
-                    <div className='card__city'>Capital Federal</div>
+                    <div className='card__city'>{city}</div>
                 </div>
             </a>
         </Link>

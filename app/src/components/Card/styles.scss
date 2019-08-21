@@ -1,16 +1,22 @@
 @import '../../scss/variables.scss';
 .card {
-    padding: 15px;
+    padding: 15px 15px 0 15px;
     box-sizing: border-box;
     background-color: $white;
+    &:last-child a {
+        border-bottom: none;
+    }
     &__link {
         display: flex;
+        padding-bottom: 15px; 
         text-decoration: none;
         color: $dark;
+        border-bottom: 1px solid $lightGrey;
+        box-sizing: border-box;
     }
     &__image {
         width: 180px;
-        height: 180px;
+        //height: 180px;
         border-radius: 2px;
     }
     &__description-wrapper {
@@ -23,6 +29,7 @@
     &__price-wrapper {
         display: flex;
         flex-direction: column;
+        max-width: 500px;
     }
     &__price {
         display: flex;

@@ -22,6 +22,7 @@ const mapResultToItem = (item) => ({
     'picture': item.pictures[0].secure_url,
     'condition': item.condition,
     'free_shipping': item.shipping.free_shipping,
+    'city': item.seller_address.state.name,
 });     
 
 const mapSearchResultsToResponse = (searchResults) => {

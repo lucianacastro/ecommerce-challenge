@@ -15,7 +15,7 @@ export default class Results extends React.Component {
         return(
             <div className='results'>
                 <BreadCrumb categories={categories}/>
-                {items.map((item, idx) => <Card key={`item-${idx}`} imageUrl={item.picture} price={item.price} freeShipping={item.free_shipping} title={item.title}/> )}
+                {items.map((item, idx) => <Card key={`item-${idx}`} imageUrl={item.picture} price={item.price} freeShipping={item.free_shipping} title={item.title} city={item.city}/> )}
             </div>
         );
     }
