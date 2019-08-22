@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 import './styles.scss';
 
-const Card = ({ imageUrl, price, freeShipping, description, city, title }) => (
+
+const Card = ({ itemId, imageUrl, price, freeShipping, description, city, title }) => (
     <div className='card'>
-        <Link href=''>
+        <Link href={`/product/[id-title]`} as={`/product/${itemId}-${title}`}>
             <a className='card__link'>
                 <img className='card__image' src={imageUrl} title={title} />
                 
@@ -29,6 +31,7 @@ const Card = ({ imageUrl, price, freeShipping, description, city, title }) => (
 );
 
 Card.propTypes = {
+    'itemId': PropTypes.string,
     'imageUrl': PropTypes.string,
     'price': PropTypes.object,
     'freeShipping': PropTypes.bool,

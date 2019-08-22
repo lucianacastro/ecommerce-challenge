@@ -24,6 +24,7 @@ export default class Results extends React.Component {
                     {items.map((item, idx) => 
                         <Card 
                             key={`item-${idx}`}
+                            itemId={item.id}
                             imageUrl={item.picture}
                             price={item.price}
                             freeShipping={item.free_shipping}

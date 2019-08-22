@@ -1,4 +1,5 @@
 import fetch from 'isomorphic-unfetch';
+
 const BFF_API_URL = process.browser ?
     process.env.FE_BFF_API_URL :
     process.env.BE_BFF_API_URL ;
