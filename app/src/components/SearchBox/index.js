@@ -8,8 +8,13 @@ import './styles.scss';
 export default class SearchBox extends React.Component {
 
     static displayName = 'SearchBox';
+
+    static propTypes = {
+        textInput: PropTypes.string,
+    }
+    
     state = {
-        textInput: '',
+        textInput: this.props.searchText,
     }
 
     updateTextInput = (event) => {

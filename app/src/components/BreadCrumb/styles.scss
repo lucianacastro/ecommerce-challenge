@@ -2,7 +2,7 @@
 .bread-crumb {
     display: flex;
     width: 100%;
-    padding: 15px 10px;
+    padding: 15px 10px 0;
     &__category {
         font-size: 12px;
         color: $grey;
@@ -15,7 +15,7 @@
             position: absolute;
             width: 20px;
             height: 20px;
-            margin-left: 2px;
+            //margin-left: 1px;
             background: url('/static/arrow.svg');
             background-size: cover;
 

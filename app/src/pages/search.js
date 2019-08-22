@@ -8,10 +8,12 @@ import Results from '../components/Results';
 
 
 export default class Search extends React.Component {
+
 	static displayName='Search';
+	
 	static async getInitialProps({ query: { q = 'plancha' } }) {
 		const { categories, items } = await getSearch(q);
-		return { categories, items };
+		return { categories, items, searchText: q };
 	}
 	render() {
 		return(
@@ -19,7 +21,7 @@ export default class Search extends React.Component {
 				<Head>
 					<title>Search</title>
 				</Head>
-				<Layout>
+				<Layout text={this.props.searchText}>
 					<Container>
 						<Results categories={this.props.categories} items={this.props.items} />
 					</Container>

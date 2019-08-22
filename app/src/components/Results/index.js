@@ -7,11 +7,14 @@ import Card from '../Card';
 import './styles.scss';
 
 export default class Results extends React.Component {
+
     static displayName = 'Results';
+    
     static propTypes = {
         categories: PropTypes.array,
         items: PropTypes.array,
     };
+    
     render() {
         const { categories, items } = this.props;
         return(
