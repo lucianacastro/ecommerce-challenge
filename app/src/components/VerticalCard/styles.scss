@@ -7,9 +7,14 @@
     &__top-wrapper {
         display: flex;
     }
-    &__image {
+    &__image-wrapper {
+        display: flex;
+        justify-content: center;
         width: calc((100% - 64px) * 0.7);
         margin: 0 32px;
+        border-radius: 4px;
+    }
+    &__image {
         border-radius: 4px;
     }
 
@@ -17,14 +22,14 @@
         &__top-wrapper {
             flex-direction: column;
         }
-        &__image {
+        &__image-wrapper {
             width: calc((100% - 64px));
             max-width: 450px;
             margin: 0 auto;
         }
     }
     @media(max-width: $mobileMax) {
-        &__image {
+        &__image-wrapper, &__image {
             max-width: 300px;
         }
     }

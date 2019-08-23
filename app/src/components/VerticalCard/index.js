@@ -12,7 +12,9 @@ import './styles.scss';
 const VerticalCard = ({ imageUrl, price, condition, soldQuantity, description, title }) => (
     <div className='vertical-card'>
         <div className='vertical-card__top-wrapper'>
-            <img className='vertical-card__image' src={imageUrl} title={title}/>
+            <div className='vertical-card__image-wrapper'>
+                <img className='vertical-card__image' src={imageUrl} title={title}/>
+            </div>
             <Price price={price} condition={condition} soldQuantity={soldQuantity} title={title} />
         </div>
         <Description descriptionText={description}/>
