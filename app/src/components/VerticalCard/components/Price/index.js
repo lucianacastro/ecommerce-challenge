@@ -9,7 +9,7 @@ const Price = ({ price, condition, soldQuantity, title }) => {
     const formattedPrice = price && typeof(price.amount) === 'number' 
         ? getFormattedPrice(price.amount)
         : false;
-    return ( 
+    return (
         <div className='price'>
             <div className='price__sell-info'>{`${productCondition[condition]} - ${soldQuantity} vendidos`}</div>
             <div className='price__title'>{title}</div>

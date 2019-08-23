@@ -11,13 +11,19 @@ const mapCategories = filters => {
     }
 }
 
+const getDecimalLength = (number) => {
+    const num = number.toString().split('.');
+    console.log(num);
+    return num[1].length;
+}
+
 const mapResultToItem = (item) => ({
     'id': item.id,
     'title': item.title,
     'price': {
         'currency': item.currency_id,
         'amount': item.price,
-        'decimals': NaN, // ver qué dato debe ir acá
+        'decimals': getDecimalLength(item.price),
     },
     'picture': item.pictures[0].secure_url,
     'condition': item.condition,
@@ -28,9 +34,9 @@ const mapResultToItem = (item) => ({
 const mapSearchResultsToResponse = (searchResults) => {
     const { results, filters } = searchResults;
     return {
-        'author': { // https://api.mercadolibre.com/users/{sellerId} ????
-            'name': '',
-            'lastname': '',
+        'author': {
+            'name': 'Luciana',
+            'lastname': 'Castro',
         },
         'categories': mapCategories(filters),
         'items': results.map(item => mapResultToItem(item)),
@@ -39,9 +45,9 @@ const mapSearchResultsToResponse = (searchResults) => {
 
 const mapItemToResponse = (item) => {
     return {
-        'author': { // https://api.mercadolibre.com/users/{sellerId} ????
-            'name': '',
-            'lastname': '',
+        'author': {
+            'name': 'Luciana',
+            'lastname': 'Castro',
         },
         'item': { 
             ...mapResultToItem(item),
