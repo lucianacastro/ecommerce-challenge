@@ -13,8 +13,7 @@ const mapCategories = filters => {
 
 const getDecimalLength = (number) => {
     const num = number.toString().split('.');
-    console.log(num);
-    return num[1].length;
+    return num[1] ? num[1].length : 0;
 }
 
 const mapResultToItem = (item) => ({

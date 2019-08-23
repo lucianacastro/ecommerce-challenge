@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import slug from 'slug';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
@@ -8,7 +9,7 @@ import './styles.scss';
 
 const Card = ({ itemId, imageUrl, price, freeShipping, description, city, title }) => (
     <div className='card'>
-        <Link href={`/product/[id-title]`} as={`/product/${itemId}-${title}`}>
+        <Link href={`/product/[id-title]`} as={`/product/${itemId}-${slug(title)}`}>
             <a className='card__link'>
                 <img className='card__image' src={imageUrl} title={title} />
                 
