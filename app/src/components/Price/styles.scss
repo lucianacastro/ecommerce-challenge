@@ -1,0 +1,11 @@
+@import '../../scss/variables.scss';
+.price {
+    display: flex;
+    &__amount {
+        margin: 16px 0;
+        font-size: 46px;
+    }
+    &__decimals {
+        font-size: 30px;
+    }
+}

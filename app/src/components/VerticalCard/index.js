@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-import Price from './components/Price';
+import SellInfo from './components/SellInfo';
 import Description from './components/Description';
 
 import './styles.scss';
@@ -15,7 +15,7 @@ const VerticalCard = ({ imageUrl, price, condition, soldQuantity, description, t
             <div className='vertical-card__image-wrapper'>
                 <img className='vertical-card__image' src={imageUrl} title={title}/>
             </div>
-            <Price price={price} condition={condition} soldQuantity={soldQuantity} title={title} />
+            <SellInfo price={price} condition={condition} soldQuantity={soldQuantity} title={title} />
         </div>
         <Description descriptionText={description}/>
     </div>
