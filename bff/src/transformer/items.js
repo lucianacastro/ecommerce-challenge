@@ -43,9 +43,11 @@ const mapItemToResponse = (item) => {
             'name': '',
             'lastname': '',
         },
-        'item': mapResultToItem(item),
-        'sold_quantity': item.sold_quantity,
-        'description': item.description
+        'item': { 
+            ...mapResultToItem(item),
+            'sold_quantity': item.sold_quantity,
+            'description': item.description
+        }
     }
 }
 

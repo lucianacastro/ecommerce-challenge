@@ -11,7 +11,7 @@ export default class Search extends React.Component {
 
 	static displayName='Search';
 	
-	static async getInitialProps({ query: { q = 'plancha' } }) {
+	static async getInitialProps({ query: { q = '' } }) {
 		const { categories, items } = await getSearch(q);
 		return { categories, items, searchText: q };
 	}

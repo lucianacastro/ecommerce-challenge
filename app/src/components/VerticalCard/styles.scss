@@ -1,0 +1,13 @@
+@import '../../scss/variables.scss';
+
+.vertical-card {
+    display: flex;
+    flex-direction: column;
+    &__top-wrapper {
+        display: flex;
+    }
+    &__image {
+        width: 680px;
+    }
+    
+}

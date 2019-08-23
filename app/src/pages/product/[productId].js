@@ -5,7 +5,7 @@ import { useRouter } from 'next/router'
 import { getItem } from '../../services/bff';
 import Layout from '../../components/Layout';
 import Container from '../../components/Container';
-import Results from '../../components/Results';
+import Detail from '../../components/Detail';
 
 export default class Product extends React.Component {
 
@@ -28,8 +28,7 @@ export default class Product extends React.Component {
 				</Head>
 				<Layout >
 					<Container>
-						{/* <ItemDetail item={item} /> */}
-						{this.props.item.title}
+						<Detail item={this.props.item} />
 					</Container>
 				</Layout>
 			</>
