@@ -1,5 +1,9 @@
+@import '../../scss/variables.scss';
 .container {
     width: 100%;
-    max-width: 980px;
+    max-width: $containerWidth;
     margin: 0 auto;
+    @media(max-width: $tabletMax) {
+        max-width: $containerWidthTablet;
+    }
 }

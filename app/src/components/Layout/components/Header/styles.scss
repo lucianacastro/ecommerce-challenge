@@ -12,6 +12,12 @@
         justify-content: center;
         align-items: center;
         width: 100%;
-        max-width: 980px;
+        max-width: $containerWidth;
+    }
+    @media(max-width: $tabletMax) {
+        &__search-wrapper {
+            max-width: $containerWidthTablet;
+        }
+        
     }
 }

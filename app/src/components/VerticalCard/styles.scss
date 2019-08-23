@@ -3,11 +3,30 @@
 .vertical-card {
     display: flex;
     flex-direction: column;
+    
     &__top-wrapper {
         display: flex;
     }
     &__image {
-        width: 680px;
+        width: calc((100% - 64px) * 0.7);
+        margin: 0 32px;
+        border-radius: 4px;
+    }
+
+    @media(max-width: $tabletMax) {
+        &__top-wrapper {
+            flex-direction: column;
+        }
+        &__image {
+            width: calc((100% - 64px));
+            max-width: 450px;
+            margin: 0 auto;
+        }
+    }
+    @media(max-width: $mobileMax) {
+        &__image {
+            max-width: 300px;
+        }
     }
     
 }

@@ -1,0 +1,9 @@
+@import '../../scss/variables.scss';
+.detail {
+    margin-top: 16px;
+    border-radius: 4px;
+    background-color: $white;
+    @media(max-width: $mobileMax) {
+        border-radius: 0;
+    }
+}

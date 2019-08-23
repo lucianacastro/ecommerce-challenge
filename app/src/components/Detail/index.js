@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import BreadCrumb from '../BreadCrumb';
 import VerticalCard from '../VerticalCard';
 
+import './styles.scss';
+
 const Detail = ({ item }) => (
     <div className='detail'>
         <BreadCrumb />

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 import Price from './components/Price';
+import Description from './components/Description';
 
 import './styles.scss';
 
@@ -13,12 +14,8 @@ const VerticalCard = ({ imageUrl, price, condition, soldQuantity, description, t
         <div className='vertical-card__top-wrapper'>
             <img className='vertical-card__image' src={imageUrl} title={title}/>
             <Price price={price} condition={condition} soldQuantity={soldQuantity} title={title} />
-            
         </div>
-        <div className='vertical-card__bottom'>
-            <div className='vertical-card__description-title'>Descripción del producto</div>
-            <div className='vertical-card__description'>{description}</div>
-        </div>
+        <Description descriptionText={description}/>
     </div>
 );
 
