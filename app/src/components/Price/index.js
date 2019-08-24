@@ -4,7 +4,8 @@ import cn from 'classnames';
 
 import './styles.scss';
 
-const getFormattedPrice = (price) => Math.trunc(price).toLocaleString('de-DE');
+const getFormattedPrice = (price) => console.log(price)||
+    Math.trunc(price).toLocaleString('EN').replace(/,/g, '.');
 
 const rightPad = (value, max) => {
     const str = value.toString();
