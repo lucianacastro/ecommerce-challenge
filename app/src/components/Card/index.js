@@ -4,6 +4,8 @@ import slug from 'slug';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
+import Price from '../Price';
+
 import './styles.scss';
 
 
@@ -11,12 +13,12 @@ const Card = ({ itemId, imageUrl, price, freeShipping, description, city, title 
     <div className='card'>
         <Link href={`/product/[id-title]`} as={`/product/${itemId}-${slug(title)}`}>
             <a className='card__link'>
-                <img className='card__image' src={imageUrl} title={title} />
+                <img className='card__image' src={imageUrl} alt={title} title={title} />
                 
                 <div className='card__description-wrapper'>
                     <div className='card__price-wrapper'>
                         <div className='card__price'>
-                            <div className='card__value'>{`$ ${Math.trunc(price.amount)}`}</div>
+                            <Price price={price} withDecimals={false} className='small'/>
                             { freeShipping 
                                 ? <div className='card__shipping-icon' title='Free shipping'/>
                                 : false

@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+import cn from 'classnames';
 
 import './styles.scss';
 
@@ -20,11 +19,27 @@ const getDecimal = (number) => {
     return '00';
 };
 
-const Price = ({ price }) => (
-    <div className='price'>
+const Price = ({ price, withDecimals, className }) => (
+    <div className={cn('price', className)}>
         <div className='price__amount'>{`$ ${getFormattedPrice(price.amount)}`}</div>
-        <span className='price__decimal'>{getDecimal(price.amount)}</span>
+        {withDecimals 
+            ? <span className='price__decimal'>{getDecimal(price.amount)}</span>
+            : false
+        }
+        
     </div>
 );
+
+Price.displayName = '';
+
+Price.propTypes = {
+    price: PropTypes.object,
+    withDecimals: PropTypes.bool,
+    className: PropTypes.string,
+}
+
+Price.defaultProps = {
+    withDecimals: true,
+}
 
 export default Price;
