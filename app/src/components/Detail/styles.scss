@@ -4,6 +4,7 @@
     border-radius: 4px;
     background-color: $white;
     @media(max-width: $mobileMax) {
+        margin-top: 0;
         border-radius: 0;
     }
 }

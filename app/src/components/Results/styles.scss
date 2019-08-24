@@ -5,4 +5,9 @@
         margin-top: 16px;
         border-radius: 4px;
     }
+    @media(max-width: $mobileMax) {
+        &__cards-wrapper {
+            margin-top: 0;
+        }
+    }
 }
