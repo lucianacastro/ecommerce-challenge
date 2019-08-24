@@ -1,6 +1,6 @@
 import React from 'react';
-import Head from 'next/head';
 
+import PageHead from '../components/PageHead';
 import { getSearch } from '../services/bff';
 import Layout from '../components/Layout';
 import Container from '../components/Container';
@@ -18,10 +18,8 @@ export default class Search extends React.Component {
 	render() {
 		return(
 			<>
-				<Head>
-					<title>Search</title>
-				</Head>
-				<Layout text={this.props.searchText}>
+				<PageHead titlePrefix={this.props.searchText}/>
+				<Layout searchText={this.props.searchText}>
 					<Container>
 						<Results categories={this.props.categories} items={this.props.items} />
 					</Container>

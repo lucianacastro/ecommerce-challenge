@@ -1,7 +1,6 @@
 import React from 'react';
-import Head from 'next/head';
-import { useRouter } from 'next/router'
 
+import PageHead from '../../components/PageHead';
 import { getItem } from '../../services/bff';
 import Layout from '../../components/Layout';
 import Container from '../../components/Container';
@@ -22,9 +21,7 @@ export default class Product extends React.Component {
 	render() {
 		return(
 			<>
-				<Head>
-					<title>Mercado Libre</title>
-				</Head>
+				<PageHead titlePrefix={this.props.item.title}/>
 				<Layout >
 					<Container>
 						<Detail item={this.props.item} />
