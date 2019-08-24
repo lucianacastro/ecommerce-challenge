@@ -1,7 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
 
 import SellInfo from './components/SellInfo';
 import Description from './components/Description';
@@ -34,7 +32,6 @@ VerticalCard.defaultProps = {
     'imageUrl': '',
     'price': {},
     'condition': '',
-    'soldQuantity': NaN,
     'title': '',
     'description': '',
     
