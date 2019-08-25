@@ -32,7 +32,7 @@ export default class SearchBox extends React.Component {
 
     componentDidMount(){
         this.searchInput.focus(); 
-     }
+    }
 
     render () {
         const { textInput = '' } = this.state;
