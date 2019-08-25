@@ -11,7 +11,7 @@ const VerticalCard = ({ imageUrl, price, condition, soldQuantity, description, t
     <div className='vertical-card'>
         <div className='vertical-card__top-wrapper'>
             <div className='vertical-card__image-wrapper'>
-                <img className='vertical-card__image' src={imageUrl} title={title}/>
+                <img className='vertical-card__image' src={imageUrl} alt={title} title={title}/>
             </div>
             <SellInfo price={price} condition={condition} soldQuantity={soldQuantity} title={title} />
         </div>
@@ -25,7 +25,7 @@ VerticalCard.propTypes = {
     'condition': PropTypes.string,
     'soldQuantity': PropTypes.number,
     'title': PropTypes.string,
-    'description': PropTypes.element,
+    'description': PropTypes.node,
 }
 
 VerticalCard.defaultProps = {

@@ -13,7 +13,7 @@ const Description = ({ descriptionText }) => (
 Description.displayName = 'Description';
 
 Description.propTypes = {
-    descriptionText: PropTypes.element,
+    descriptionText: PropTypes.node,
 }
 
 export default Description;
