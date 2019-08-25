@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import slug from 'slug';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 
 import Price from '../Price';
 

@@ -1,0 +1,823 @@
+{
+    "site_id":"MLA",
+    "query":"iphone",
+    "paging":{
+        "total":13272,
+        "offset":0,
+        "limit":1,
+        "primary_results":1000
+    },
+    "results":[
+        {
+            "id":"MLA771186525",
+            "site_id":"MLA",
+            "title":"iPhone 7 Apple 32gb Sellado Libre + Original Gtia + Templado",
+            "seller":{
+                "id":333535949,
+                "power_seller_status":null,
+                "car_dealer":false,
+                "real_estate_agency":false,
+                "tags":[
+
+                ]
+            },
+            "price":39989.99,
+            "currency_id":"ARS",
+            "available_quantity":1,
+            "sold_quantity":100,
+            "buying_mode":"buy_it_now",
+            "listing_type_id":"gold_special",
+            "stop_time":"2039-02-10T04:00:00.000Z",
+            "condition":"new",
+            "permalink":"https://articulo.mercadolibre.com.ar/MLA-771186525-iphone-7-apple-32gb-sellado-libre-original-gtia-templado-_JM",
+            "thumbnail":"http://mla-s2-p.mlstatic.com/751692-MLA31081757564_062019-I.jpg",
+            "accepts_mercadopago":true,
+            "installments":{
+                "quantity":12,
+                "amount":5457.63,
+                "rate":63.77,
+                "currency_id":"ARS"
+            },
+            "address":{
+                "state_id":"AR-C",
+                "state_name":"Capital Federal",
+                "city_id":null,
+                "city_name":"Palermo Soho"
+            },
+            "shipping":{
+                "free_shipping":true,
+                "mode":"me2",
+                "tags":[
+                    "mandatory_free_shipping"
+                ],
+                "logistic_type":"drop_off",
+                "store_pick_up":false
+            },
+            "seller_address":{
+                "id":"",
+                "comment":"",
+                "address_line":"",
+                "zip_code":"",
+                "country":{
+                    "id":"AR",
+                    "name":"Argentina"
+                },
+                "state":{
+                    "id":"AR-C",
+                    "name":"Capital Federal"
+                },
+                "city":{
+                    "id":null,
+                    "name":"Palermo Soho"
+                },
+                "latitude":"",
+                "longitude":""
+            },
+            "attributes":[
+                {
+                    "id":"BRAND",
+                    "name":"Marca",
+                    "value_id":"9344",
+                    "value_name":"Apple",
+                    "value_struct":null,
+                    "attribute_group_id":"OTHERS",
+                    "attribute_group_name":"Otros",
+                    "source":6587939990796619
+                },
+                {
+                    "source":6587939990796619,
+                    "id":"CPU_MODEL",
+                    "name":"Modelo de CPU",
+                    "value_id":null,
+                    "value_name":"Apple A10",
+                    "value_struct":null,
+                    "attribute_group_id":"OTHERS",
+                    "attribute_group_name":"Otros"
+                },
+                {
+                    "attribute_group_name":"Otros",
+                    "source":1572,
+                    "id":"ITEM_CONDITION",
+                    "name":"Condición del ítem",
+                    "value_id":"2230284",
+                    "value_name":"Nuevo",
+                    "value_struct":null,
+                    "attribute_group_id":"OTHERS"
+                },
+                {
+                    "value_struct":null,
+                    "attribute_group_id":"OTHERS",
+                    "attribute_group_name":"Otros",
+                    "source":6587939990796619,
+                    "id":"LINE",
+                    "name":"Línea",
+                    "value_id":"58993",
+                    "value_name":"iPhone"
+                },
+                {
+                    "attribute_group_id":"OTHERS",
+                    "attribute_group_name":"Otros",
+                    "source":6587939990796619,
+                    "id":"MODEL",
+                    "name":"Modelo",
+                    "value_id":"312155",
+                    "value_name":"iPhone 7",
+                    "value_struct":null
+                }
+            ],
+            "original_price":null,
+            "category_id":"MLA1055",
+            "official_store_id":null,
+            "catalog_product_id":"MLA6240112",
+            "tags":[
+                "extended_warranty_eligible",
+                "good_quality_picture",
+                "good_quality_thumbnail",
+                "brand_verified",
+                "immediate_payment",
+                "cart_eligible"
+            ]
+        }
+    ],
+    "secondary_results":[
+
+    ],
+    "related_results":[
+
+    ],
+    "sort":{
+        "id":"relevance",
+        "name":"Más relevantes"
+    },
+    "available_sorts":[
+        {
+            "id":"price_asc",
+            "name":"Menor precio"
+        },
+        {
+            "id":"price_desc",
+            "name":"Mayor precio"
+        }
+    ],
+    "filters":[
+        {
+            "id":"category",
+            "name":"Categorías",
+            "type":"text",
+            "values":[
+                {
+                    "id":"MLA1055",
+                    "name":"Celulares y Smartphones",
+                    "path_from_root":[
+                        {
+                            "id":"MLA1051",
+                            "name":"Celulares y Teléfonos"
+                        },
+                        {
+                            "id":"MLA1055",
+                            "name":"Celulares y Smartphones"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id":"LINE",
+            "name":"Línea",
+            "type":"STRING",
+            "values":[
+                {
+                    "id":"58993",
+                    "name":"iPhone"
+                }
+            ]
+        },
+        {
+            "id":"BRAND",
+            "name":"Marca",
+            "type":"STRING",
+            "values":[
+                {
+                    "id":"9344",
+                    "name":"Apple"
+                }
+            ]
+        }
+    ],
+    "available_filters":[
+        {
+            "id":"official_store",
+            "name":"Tiendas oficiales",
+            "type":"text",
+            "values":[
+                {
+                    "id":"all",
+                    "name":"Todas las tiendas oficiales",
+                    "results":3
+                }
+            ]
+        },
+        {
+            "id":"state",
+            "name":"Ubicación",
+            "type":"text",
+            "values":[
+                {
+                    "id":"TUxBUENBUGw3M2E1",
+                    "name":"Capital Federal",
+                    "results":5925
+                },
+                {
+                    "id":"TUxBUEdSQWU4ZDkz",
+                    "name":"Bs.As. G.B.A. Norte",
+                    "results":1454
+                },
+                {
+                    "id":"TUxBUEdSQXJlMDNm",
+                    "name":"Bs.As. G.B.A. Sur",
+                    "results":1359
+                },
+                {
+                    "id":"TUxBUEdSQWVmNTVm",
+                    "name":"Bs.As. G.B.A. Oeste",
+                    "results":1103
+                },
+                {
+                    "id":"TUxBUENPUmFkZGIw",
+                    "name":"Córdoba",
+                    "results":616
+                },
+                {
+                    "id":"TUxBUFNBTmU5Nzk2",
+                    "name":"Santa Fe",
+                    "results":393
+                },
+                {
+                    "id":"TUxBUFpPTmFpbnRl",
+                    "name":"Buenos Aires Interior",
+                    "results":369
+                },
+                {
+                    "id":"TUxBUE1FTmE5OWQ4",
+                    "name":"Mendoza",
+                    "results":183
+                },
+                {
+                    "id":"TUxBUENPU2ExMmFkMw",
+                    "name":"Bs.As. Costa Atlántica",
+                    "results":181
+                },
+                {
+                    "id":"TUxBUE1JU3MzNjIx",
+                    "name":"Misiones",
+                    "results":145
+                },
+                {
+                    "id":"TUxBUEVOVHMzNTdm",
+                    "name":"Entre Ríos",
+                    "results":93
+                },
+                {
+                    "id":"TUxBUFRVQ244NmM3",
+                    "name":"Tucumán",
+                    "results":76
+                },
+                {
+                    "id":"TUxBUENPUnM5MjI0",
+                    "name":"Corrientes",
+                    "results":67
+                },
+                {
+                    "id":"TUxBUFLNT29iZmZm",
+                    "name":"Río Negro",
+                    "results":66
+                },
+                {
+                    "id":"TUxBUEZPUmE1OTk5",
+                    "name":"Formosa",
+                    "results":63
+                },
+                {
+                    "id":"TUxBUE5FVW4xMzMzNQ",
+                    "name":"Neuquén",
+                    "results":57
+                },
+                {
+                    "id":"TUxBUFNBTGFjMTJi",
+                    "name":"Salta",
+                    "results":45
+                },
+                {
+                    "id":"TUxBUENIVXQxNDM1MQ",
+                    "name":"Chubut",
+                    "results":39
+                },
+                {
+                    "id":"TUxBUFNBTm5lYjU4",
+                    "name":"San Juan",
+                    "results":39
+                },
+                {
+                    "id":"TUxBUFNBTnM0ZTcz",
+                    "name":"San Luis",
+                    "results":30
+                },
+                {
+                    "id":"TUxBUFNBTm9lOTlk",
+                    "name":"Santiago del Estero",
+                    "results":27
+                },
+                {
+                    "id":"TUxBUExBWmE1OWMy",
+                    "name":"La Pampa",
+                    "results":24
+                },
+                {
+                    "id":"TUxBUENBVGFiY2Fm",
+                    "name":"Catamarca",
+                    "results":21
+                },
+                {
+                    "id":"TUxBUENIQW8xMTNhOA",
+                    "name":"Chaco",
+                    "results":21
+                },
+                {
+                    "id":"TUxBUExBWmEyNzY0",
+                    "name":"La Rioja",
+                    "results":18
+                },
+                {
+                    "id":"TUxBUEpVSnk3YmUz",
+                    "name":"Jujuy",
+                    "results":15
+                },
+                {
+                    "id":"TUxBUFNBTno3ZmY5",
+                    "name":"Santa Cruz",
+                    "results":15
+                },
+                {
+                    "id":"TUxBUFRJRVoxM2M5YQ",
+                    "name":"Tierra del Fuego",
+                    "results":3
+                }
+            ]
+        },
+        {
+            "id":"price",
+            "name":"Precio",
+            "type":"range",
+            "values":[
+                {
+                    "id":"*-15000.0",
+                    "name":"Hasta $ 15.000",
+                    "results":4242
+                },
+                {
+                    "id":"15000.0-30000.0",
+                    "name":"$15.000 a $30.000",
+                    "results":3867
+                },
+                {
+                    "id":"30000.0-*",
+                    "name":"Más de $30.000",
+                    "results":5161
+                }
+            ]
+        },
+        {
+            "id":"accepts_mercadopago",
+            "name":"Filtro por MercadoPago",
+            "type":"boolean",
+            "values":[
+                {
+                    "id":"yes",
+                    "name":"Con MercadoPago",
+                    "results":13270
+                }
+            ]
+        },
+        {
+            "id":"installments",
+            "name":"Pago",
+            "type":"text",
+            "values":[
+                {
+                    "id":"yes",
+                    "name":"En cuotas",
+                    "results":13252
+                },
+                {
+                    "id":"no_interest",
+                    "name":"Sin interés",
+                    "results":1675
+                }
+            ]
+        },
+        {
+            "id":"shipping",
+            "name":"Tipo de entrega",
+            "type":"text",
+            "values":[
+                {
+                    "id":"mercadoenvios",
+                    "name":"Con envío",
+                    "results":11712
+                },
+                {
+                    "id":"fulfillment",
+                    "name":"Full",
+                    "results":1
+                }
+            ]
+        },
+        {
+            "id":"power_seller",
+            "name":"Filtro por calidad de vendedores",
+            "type":"boolean",
+            "values":[
+                {
+                    "id":"yes",
+                    "name":"Mejores vendedores",
+                    "results":196
+                }
+            ]
+        },
+        {
+            "id":"since",
+            "name":"Filtro por fecha de comienzo",
+            "type":"text",
+            "values":[
+                {
+                    "id":"today",
+                    "name":"Publicados hoy",
+                    "results":99
+                }
+            ]
+        },
+        {
+            "id":"until",
+            "name":"Filtro por fecha de finalización",
+            "type":"text",
+            "values":[
+                {
+                    "id":"today",
+                    "name":"Finalizan hoy",
+                    "results":72
+                }
+            ]
+        },
+        {
+            "id":"has_video",
+            "name":"Filtro por publicaciones con video",
+            "type":"boolean",
+            "values":[
+                {
+                    "id":"yes",
+                    "name":"Publicaciones con video",
+                    "results":410
+                }
+            ]
+        },
+        {
+            "id":"has_pictures",
+            "name":"Filtro por publicaciones con imágenes",
+            "type":"boolean",
+            "values":[
+                {
+                    "id":"yes",
+                    "name":"Con fotos",
+                    "results":13216
+                }
+            ]
+        },
+        {
+            "id":"shipping_cost",
+            "name":"Costo de envío",
+            "type":"text",
+            "values":[
+                {
+                    "id":"free",
+                    "name":"Gratis",
+                    "results":5844
+                }
+            ]
+        },
+        {
+            "id":"CARRIER",
+            "name":"Compañía telefónica",
+            "type":"STRING",
+            "values":[
+                {
+                    "id":"298335",
+                    "name":"Liberado",
+                    "results":11058
+                },
+                {
+                    "id":"303170",
+                    "name":"Movistar",
+                    "results":111
+                },
+                {
+                    "id":"298333",
+                    "name":"Claro",
+                    "results":105
+                },
+                {
+                    "id":"303171",
+                    "name":"Personal",
+                    "results":51
+                }
+            ]
+        },
+        {
+            "id":"INTERNAL_MEMORY",
+            "name":"Memoria interna",
+            "type":"range",
+            "values":[
+                {
+                    "id":"(*-32GB)",
+                    "name":"Menos de 32 GB",
+                    "results":2943
+                },
+                {
+                    "id":"[32GB-64GB)",
+                    "name":"32 a 63 GB",
+                    "results":2478
+                },
+                {
+                    "id":"[64GB-128GB)",
+                    "name":"64 a 127 GB",
+                    "results":3879
+                },
+                {
+                    "id":"[128GB-256GB)",
+                    "name":"128 a 255 GB",
+                    "results":2064
+                },
+                {
+                    "id":"[256GB-*)",
+                    "name":"256 GB o más",
+                    "results":1437
+                }
+            ]
+        },
+        {
+            "id":"IS_DUAL_SIM",
+            "name":"Otras características",
+            "type":"boolean",
+            "values":[
+                {
+                    "id":"242085",
+                    "name":"Es Dual SIM",
+                    "results":777
+                }
+            ]
+        },
+        {
+            "id":"ITEM_CONDITION",
+            "name":"Condición",
+            "type":"STRING",
+            "values":[
+                {
+                    "id":"2230581",
+                    "name":"Usado",
+                    "results":9378
+                },
+                {
+                    "id":"2230284",
+                    "name":"Nuevo",
+                    "results":3879
+                },
+                {
+                    "id":"2230582",
+                    "name":"Reacondicionado",
+                    "results":63
+                }
+            ]
+        },
+        {
+            "id":"MODEL",
+            "name":"Modelo",
+            "type":"STRING",
+            "values":[
+                {
+                    "id":"312155",
+                    "name":"iPhone 7",
+                    "results":1473
+                },
+                {
+                    "id":"312149",
+                    "name":"iPhone 6",
+                    "results":1206
+                },
+                {
+                    "id":"312151",
+                    "name":"iPhone 6s",
+                    "results":1053
+                },
+                {
+                    "id":"312157",
+                    "name":"iPhone 7 Plus",
+                    "results":975
+                },
+                {
+                    "id":"312154",
+                    "name":"iPhone SE",
+                    "results":708
+                },
+                {
+                    "id":"1164456",
+                    "name":"iPhone X",
+                    "results":663
+                },
+                {
+                    "id":"2244673",
+                    "name":"iPhone 8 Plus",
+                    "results":549
+                },
+                {
+                    "id":"2244670",
+                    "name":"iPhone 8",
+                    "results":534
+                },
+                {
+                    "id":"312144",
+                    "name":"iPhone 5s",
+                    "results":462
+                },
+                {
+                    "id":"14608",
+                    "name":"iPhone",
+                    "results":282
+                },
+                {
+                    "id":"52828",
+                    "name":"7 Plus",
+                    "results":267
+                },
+                {
+                    "id":"312153",
+                    "name":"iPhone 6s Plus",
+                    "results":261
+                },
+                {
+                    "id":"5414168",
+                    "name":"iPhone XS Max",
+                    "results":246
+                },
+                {
+                    "id":"5414079",
+                    "name":"iPhone XS",
+                    "results":246
+                },
+                {
+                    "id":"59833",
+                    "name":"6",
+                    "results":222
+                },
+                {
+                    "id":"27251",
+                    "name":"7",
+                    "results":222
+                },
+                {
+                    "id":"5414260",
+                    "name":"iPhone XR",
+                    "results":210
+                },
+                {
+                    "id":"312143",
+                    "name":"iPhone 5c",
+                    "results":207
+                },
+                {
+                    "id":"312152",
+                    "name":"iPhone 5",
+                    "results":204
+                },
+                {
+                    "id":"312150",
+                    "name":"iPhone 6 Plus",
+                    "results":192
+                },
+                {
+                    "id":"4904058",
+                    "name":"8 Plus",
+                    "results":189
+                },
+                {
+                    "id":"31998",
+                    "name":"X",
+                    "results":180
+                },
+                {
+                    "id":"312145",
+                    "name":"iPhone 4s",
+                    "results":180
+                },
+                {
+                    "id":"121350",
+                    "name":"6s",
+                    "results":156
+                },
+                {
+                    "id":"14610",
+                    "name":"iPhone 4",
+                    "results":132
+                },
+                {
+                    "id":"59000",
+                    "name":"5s",
+                    "results":126
+                },
+                {
+                    "id":"165838",
+                    "name":"SE",
+                    "results":126
+                },
+                {
+                    "id":"58054",
+                    "name":"XR",
+                    "results":105
+                },
+                {
+                    "id":"11043",
+                    "name":"8",
+                    "results":90
+                },
+                {
+                    "id":"84612",
+                    "name":"6 Plus",
+                    "results":66
+                },
+                {
+                    "id":"196204",
+                    "name":"6s Plus",
+                    "results":45
+                },
+                {
+                    "id":"17212",
+                    "name":"6S",
+                    "results":42
+                },
+                {
+                    "id":"58992",
+                    "name":"5c",
+                    "results":39
+                },
+                {
+                    "id":"5414092",
+                    "name":"iPhone XS Dual SIM",
+                    "results":30
+                },
+                {
+                    "id":"58615",
+                    "name":"5",
+                    "results":27
+                },
+                {
+                    "id":"14609",
+                    "name":"iPhone 3GS",
+                    "results":27
+                },
+                {
+                    "id":"10971",
+                    "name":"4",
+                    "results":27
+                },
+                {
+                    "id":"14605",
+                    "name":"iPhone 3G",
+                    "results":24
+                },
+                {
+                    "id":"5729",
+                    "name":"XS",
+                    "results":21
+                },
+                {
+                    "id":"58458",
+                    "name":"4S",
+                    "results":12
+                },
+                {
+                    "id":"9005",
+                    "name":"X10",
+                    "results":9
+                },
+                {
+                    "id":"2643675",
+                    "name":"Iphone",
+                    "results":9
+                },
+                {
+                    "id":"102288",
+                    "name":"S6",
+                    "results":9
+                }
+            ]
+        }
+    ]
+}

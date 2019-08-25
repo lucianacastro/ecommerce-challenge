@@ -24,7 +24,7 @@ const mapResultToItem = (item) => ({
         'amount': item.price,
         'decimals': getDecimalLength(item.price),
     },
-    'picture': item.pictures[0].secure_url,
+    'picture': item.pictures && item.pictures[0] ? item.pictures[0].secure_url : '',
     'condition': item.condition,
     'free_shipping': item.shipping.free_shipping,
     'city': item.seller_address.state.name,
@@ -51,7 +51,7 @@ const mapItemToResponse = (item) => {
         'item': { 
             ...mapResultToItem(item),
             'sold_quantity': item.sold_quantity,
-            'description': item.description
+            'description': item.description || "",
         }
     }
 }
