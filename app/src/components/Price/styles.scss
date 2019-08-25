@@ -17,5 +17,11 @@
             margin: 16px 5px;
             font-size: 12px;
         }
+        @media(max-width: $mobileMax) {
+            .price__amount {
+                margin: 10px 0;
+                font-size: 20px;
+            }
+        }
     }
 }
