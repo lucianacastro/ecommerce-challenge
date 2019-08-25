@@ -25,7 +25,7 @@ VerticalCard.propTypes = {
     'condition': PropTypes.string,
     'soldQuantity': PropTypes.number,
     'title': PropTypes.string,
-    'description': PropTypes.string,
+    'description': PropTypes.element,
 }
 
 VerticalCard.defaultProps = {

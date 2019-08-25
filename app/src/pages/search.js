@@ -6,7 +6,6 @@ import Layout from '../components/Layout';
 import Container from '../components/Container';
 import Results from '../components/Results';
 
-
 export default class Search extends React.Component {
 
 	static displayName='Search';

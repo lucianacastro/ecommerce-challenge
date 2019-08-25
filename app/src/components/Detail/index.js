@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import nl2br from 'react-newline-to-break';
 
 import BreadCrumb from '../BreadCrumb';
 import VerticalCard from '../VerticalCard';
@@ -15,7 +16,7 @@ const Detail = ({ item }) => (
             price={item.price}
             condition={item.condition}
             soldQuantity={item.sold_quantity}
-            description={item.description}
+            description={nl2br(item.description)}
         />
     </div>
 )
