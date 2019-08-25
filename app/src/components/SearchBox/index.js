@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
-import Router from 'next/router';
 
 import './styles.scss';
 
@@ -24,12 +23,6 @@ export default class SearchBox extends React.Component {
         }
     }
 
-    handleKeyPress = (event) => {
-        if (event.key === 'Enter' || event.nativeEvent.keyCode === 13) {
-            Router.push(`/items${this.state.textInput.length > 0 ? `?search=${this.state.textInput}` : ''}`);
-        }
-    }
-
     componentDidMount(){
         this.searchInput.focus(); 
     }
@@ -46,7 +39,6 @@ export default class SearchBox extends React.Component {
                     ref={(input) => { this.searchInput = input; }}
                     value={textInput}
                     onChange={this.updateTextInput}
-                    onKeyPress={this.handleKeyPress}
                 />
                 <Link href={`/items?search=${textInput}`}>
                     <a>
