@@ -3,18 +3,18 @@ const itemMock = require('./item.mock.json');
 const searchResultMock = require('./search-results.mock.json');
 
 describe('mapItemToResponse', () => {
-    it('should should add the author object', () => {
+    it('should add the author object', () => {
         const result = mapItemToResponse(itemMock);
         expect(result).toHaveProperty('author.name', 'Luciana');
         expect(result).toHaveProperty('author.lastname', 'Castro');
     });
 
-    it('should should add item sold_quantity', () => {
+    it('should add item sold_quantity', () => {
         const result = mapItemToResponse(itemMock);
         expect(result).toHaveProperty('item.sold_quantity', 100);
     });
 
-    it('should should add item description', () => {
+    it('should add item description', () => {
         const itemWithDescriptionMock = {
             ...itemMock,
             description: 'Iphone segunda mano',
@@ -86,13 +86,13 @@ describe('mapItemToResponse', () => {
 });
 
 describe('mapSearchResultsToResponse', () => {
-    it('should should add the author object', () => {
+    it('should add the author object', () => {
         const result = mapSearchResultsToResponse(searchResultMock);
         expect(result).toHaveProperty('author.name', 'Luciana');
         expect(result).toHaveProperty('author.lastname', 'Castro');
     });
 
-    it('should should add the categories array', () => {
+    it('should add the categories array', () => {
         const result = mapSearchResultsToResponse(searchResultMock);
         expect(result.categories).toEqual([
             "Celulares y Teléfonos",
@@ -100,7 +100,7 @@ describe('mapSearchResultsToResponse', () => {
         ]);
     });
 
-    it('should should map non expanded items array properly', () => {
+    it('should map non expanded items array properly', () => {
         const result = mapSearchResultsToResponse(searchResultMock);
         expect(result.items).toEqual([{
             "id": "MLA771186525",
@@ -117,7 +117,7 @@ describe('mapSearchResultsToResponse', () => {
         }]);
     });
 
-    it('should should map an expanded items array properly', () => {
+    it('should map an expanded items array properly', () => {
         const searchResultWithItemExpandedMock = {
             ...searchResultMock,
             results: [{
