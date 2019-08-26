@@ -4,9 +4,12 @@
 
 ### With docker-compose (dev mode)
 
-1. Go to the project folder and run this: `docker-compose up`
-2. Open the app using the following URL: http://localhost:3000
-3. Open the bff using the following URL: http://localhost:3001/api/items
+1. Open one terminal and go to the project folder.
+2. Go to `/bff` folder (`cd bff`) and install dependencies: `npm i`.
+3. Go to `/app` folder (`cd app`) and install dependencies: `npm i`.
+4. Go to the project folder and run this: `docker-compose up`
+5. Open the app using the following URL: http://localhost:3000
+6. Open the bff using the following URL: http://localhost:3001/api/items
 
 ### Without docker-compose
 
@@ -25,4 +28,4 @@
 
 ## Tests
 
-Either in `bff` or `app`, go to the respective folder and run `npm run test`.
+Either in bff or app, go to the respective folder and run `npm run test`.
