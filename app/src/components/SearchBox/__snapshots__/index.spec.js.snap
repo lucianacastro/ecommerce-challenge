@@ -4,36 +4,27 @@ exports[`SearchBox should map snapshot 1`] = `
 <SearchBox
   searchText="iphone"
 >
-  <div
+  <form
+    action="/items"
     className="search-box"
+    method="GET"
   >
     <input
       className="search-box__input"
+      name="search"
       onChange={[Function]}
-      onKeyPress={[Function]}
       placeholder="Nunca dejes de buscar"
       type="text"
       value="iphone"
     />
-    <Link
-      href="/search?q=iphone"
-      prefetch={true}
+    <button
+      className="search-box__button"
+      type="submit"
     >
-      <a
-        href="/search?q=iphone"
-        onClick={[Function]}
-        onMouseEnter={[Function]}
-      >
-        <button
-          className="search-box__button"
-          type="submit"
-        >
-          <div
-            className="search-box__icon"
-          />
-        </button>
-      </a>
-    </Link>
-  </div>
+      <div
+        className="search-box__icon"
+      />
+    </button>
+  </form>
 </SearchBox>
 `;

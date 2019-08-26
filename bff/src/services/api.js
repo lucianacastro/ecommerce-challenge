@@ -1,7 +1,7 @@
 const got = require('got');
 
 if (!process.env.MELI_API_URL) {
-    throw new Error('MELI_API_URL is not define');
+    throw new Error('MELI_API_URL is not defined');
 }
 
 const getSearchResults = async (searchText) => {

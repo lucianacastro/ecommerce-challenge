@@ -6,7 +6,7 @@ const mapCategories = filters => {
             .values[0].path_from_root
             .map(category => category.name);
     } catch (error) {
-        console.error(error);
+        // console.error(error);
         return [];
     }
 }

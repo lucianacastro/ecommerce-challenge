@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
+import Router from 'next/router';
 
 import './styles.scss';
 
@@ -30,7 +31,7 @@ export default class SearchBox extends React.Component {
     render () {
         const { textInput = '' } = this.state;
         return (
-            <form className='search-box' action='/items'>
+            <form className='search-box' action='/items' method='GET'>
                 <input
                     name="search"
                     className='search-box__input'
@@ -40,13 +41,9 @@ export default class SearchBox extends React.Component {
                     value={textInput}
                     onChange={this.updateTextInput}
                 />
-                <Link href={`/items?search=${textInput}`}>
-                    <a>
-                        <button className='search-box__button' type='submit' >
-                            <div className='search-box__icon' />
-                        </button>
-                    </a>
-                </Link>
+                <button className='search-box__button' type='submit' >
+                    <div className='search-box__icon' />
+                </button>
             </form>
         );
     }

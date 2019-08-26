@@ -13,16 +13,19 @@ describe('SearchBox', () => {
         expect(wrapper).toMatchSnapshot();
     });
 
-    it('should have a link', () => {
-        expect(wrapper.find('Link')).toExist();
+    it('should have a form', () => {
+        expect(wrapper.find('form')).toExist();
     });
 
-    it('should initialize the link with the given searchText prop', () => {
-        expect(wrapper.find('Link')).toHaveProp('href', '/search?q=iphone');
+    it('should have the form action set to "/items"', () => {
+        expect(wrapper.find('form')).toHaveProp('action', '/items');
     });
 
-    it('should update the link with the given input value', () => {
-        wrapper.find('input').simulate('change', { target: { value: 'plancha'} });
-        expect(wrapper.find('Link')).toHaveProp('href', '/search?q=plancha');
+    it('should have the form method set to "GET"', () => {
+        expect(wrapper.find('form')).toHaveProp('method', 'GET');
+    });
+
+    it('should have a button with type submit', () => {
+        expect(wrapper.find('form').find('button')).toHaveProp('type', 'submit');
     });
 });
